@@ -1,0 +1,234 @@
+:root {
+    --clr-primary-100: hsl(205, 15%, 58%);
+    --clr-primary-400: hsl(215, 25%, 27%);
+    --clr-primary-800: hsl(217, 33%, 17%);
+    --clr-primary-900: hsl(218, 33%, 9%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui;
+    font-size: 1.125rem;
+    background-color: #222;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+p,
+span {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.scroller {
+    position: relative;
+    margin-bottom: 48px;
+    height: 700px;
+    padding: 250px 0;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.scroller-title {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 400;
+    padding: 0 100px;
+}
+.scroller-title span {
+    display: block;
+}
+
+.scroller__inner {
+    position: absolute;
+    bottom: 10%;
+    z-index: 1;
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+
+    -webkit-mask: linear-gradient(to bottom, transparent 5%, #fff 10% 90%, transparent 95%),
+        linear-gradient(to right, transparent 5%, #fff 10% 90%, transparent 95%);
+    -webkit-mask-size: 110% 110%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-composite: source-in;
+
+    mask: linear-gradient(to top, transparent 10%, #fff 15% 90%, transparent 95%),
+        linear-gradient(to left, transparent 10%, #fff 15% 90%, transparent 95%);
+    mask-size: 110% 110%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-composite: intersect;
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+    --_animation-duration: 30s;
+}
+
+.scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+/* general styles */
+
+.tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+}
+
+.tag-list li {
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+    max-width: 325px;
+}
+
+.tag-list a {
+    display: inline-block;
+    padding: 1rem;
+}
+
+/* for testing purposed to ensure the animation lined up correctly */
+.test {
+    background: red !important;
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border: 0;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+.filter-btn {
+    cursor: pointer;
+    text-transform: uppercase;
+    background: transparent;
+    border: 0;
+    border-radius: 0.25rem;
+    padding: 0.25rem 1rem;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+    background-color: #ccc;
+}
+
+.filter-btn.active {
+    background: black;
+    color: white;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.2);
+}
+
+/* accardeon */
+.blog-item {
+    margin-bottom: 24px;
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+    /* box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.2); */
+}
+
+.blog-item:has(.open) {
+    padding-bottom: 1rem;
+}
+
+.blog-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.blog-title-wrapper {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.blog-title {
+    text-transform: uppercase;
+}
+
+.blog-content-wrapper {
+    /* display: none; */
+    padding-inline: 1rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    max-width: 1000px;
+    margin: 0 auto;
+}
