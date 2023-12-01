@@ -182,6 +182,7 @@ img {
     border: 0;
     border-radius: 0.25rem;
     padding: 0.25rem 1rem;
+    font-size: 16px;
 }
 
 .filter-btn:hover,
@@ -196,6 +197,10 @@ img {
 }
 
 /* accardeon */
+.blog-list {
+    max-width: 950px;
+    margin: 0 auto;
+}
 .blog-item {
     margin-bottom: 24px;
     border: 1px solid #fff;
@@ -221,6 +226,7 @@ img {
 
 .blog-title {
     text-transform: uppercase;
+    font-size: 1.5rem;
 }
 
 .blog-content-wrapper {
