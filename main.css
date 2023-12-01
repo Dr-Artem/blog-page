@@ -231,7 +231,7 @@ img {
 
 .blog-content-wrapper {
     /* display: none; */
-    padding-inline: 1rem;
+    padding-inline: 4rem;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease-out;
