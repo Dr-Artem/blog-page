@@ -1,9 +1,9 @@
 // Moving string
 const scrollers = document.querySelectorAll(".scroller");
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
-}
+// if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+//     addAnimation();
+// }
 
 function addAnimation() {
     scrollers.forEach((scroller) => {
@@ -26,12 +26,12 @@ function addAnimation() {
 // Button filter
 const filterList = document.querySelector(".filter");
 const filterButtons = filterList.querySelectorAll(".filter-btn");
-const conferences = document.querySelectorAll(".blog-item");
+const blogItems = document.querySelectorAll(".blog-item");
 
-let conferenceIndex = 0;
+let blogIndex = 0;
 
-conferences.forEach((conference) => {
-    conference.style.viewTransitionName = `conf-${++conferenceIndex}`;
+blogItems.forEach((blog) => {
+    blog.style.viewTransitionName = `conf-${++blogIndex}`;
 });
 
 filterButtons.forEach((button) => {
@@ -56,7 +56,7 @@ function updateActiveButton(newButton) {
 }
 
 function filterEvents(filter) {
-    conferences.forEach((conference) => {
+    blogItems.forEach((conference) => {
         const eventCategory = conference.getAttribute("data-category");
         const categoriesArray = eventCategory.split(" ");
 
@@ -68,24 +68,66 @@ function filterEvents(filter) {
     });
 }
 
-// Accordeon
-const titleWrappers = document.querySelectorAll(".blog-title-wrapper");
+let previousButton = null;
+// Додавання події кліку на кожну кнопку "read more"
+blogItems.forEach(function (item, index) {
+    const seeMoreButton = item.querySelector("button");
+    item.style.order = index + 1;
 
-titleWrappers.forEach((title) => {
-    title.addEventListener("click", ({ currentTarget }) => {
-        const panel = currentTarget.nextElementSibling;
+    seeMoreButton.addEventListener("click", function (event) {
+        const isExpanded = item.getAttribute("data-expanded") === "true";
+        const elementHeight = item.clientHeight;
 
-        if (title.classList.contains("open")) {
-            title.classList.remove("open");
-            panel.style.maxHeight = null;
-        } else {
-            const titleWithIsOpen = document.querySelectorAll(".open");
-            titleWithIsOpen.forEach((titleWithIsOpen) => {
-                titleWithIsOpen.classList.remove("open");
-                titleWithIsOpen.nextElementSibling.style.maxHeight = null;
+        if (!isExpanded) {
+            blogItems.forEach((blog) => {
+                blog.setAttribute("data-expanded", "false");
+                blog.querySelector(".blog-read-more").textContent = "read more";
+                item.classList.remove("close");
             });
-            title.classList.add("open");
-            panel.style.maxHeight = panel.scrollHeight + "px";
+
+            item.setAttribute("data-expanded", "true");
+            item.setAttribute("data-prevoius", "true");
+            item.classList.remove("close");
+            seeMoreButton.textContent = "read less";
+
+            if (previousButton && previousButton !== seeMoreButton) {
+                const previousItem = previousButton.closest(".blog-item");
+                previousItem.setAttribute("data-prevoius", "false");
+
+                setTimeout(() => {
+                    previousItem.removeAttribute("data-prevoius");
+                }, 1100);
+            }
+
+            previousButton = seeMoreButton;
+        } else {
+            item.setAttribute("data-expanded", "false");
+            item.classList.add("close");
+            seeMoreButton.textContent = "read more";
+
+            window.scrollBy({
+                top: elementHeight >= 500 ? 500 - elementHeight : 0,
+                behavior: "smooth",
+            });
         }
     });
+});
+
+function filterTitles(title) {
+    blogItems.forEach((blog) => {
+        const blogTitle = blog.querySelector(".blog-title");
+        const blogTitleArray = blogTitle.textContent.toLowerCase();
+
+        if (blogTitleArray.includes(title)) {
+            blog.removeAttribute("hidden");
+        } else {
+            blog.setAttribute("hidden", "");
+        }
+    });
+}
+
+const blogInput = document.querySelector(".blog-input");
+blogInput.addEventListener("input", ({ target }) => {
+    const inputValue = target.value.toLowerCase();
+    filterTitles(inputValue);
 });

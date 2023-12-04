@@ -7,180 +7,276 @@
         <title>Blog Page</title>
     </head>
     <body>
-        <div class="scroller" data-speed="fast">
-            <h2 class="scroller-title">Explore Tomorrow's <span> Tech: Join Our Tech Blog Now!</span></h2>
+        <section class="blog section">
+            <div class="container">
+                <div class="scroller" data-speed="fast">
+                    <h2 class="scroller-title">
+                        Explore <span>Tomorrow's </span><span>Tech: Join Our Blog Now!</span>
+                    </h2>
 
-            <ul class="tag-list scroller__inner">
-                <li><a href="#1">Вплив Big Data на розвиток інтернет-торгівлі</a></li>
-                <li><a href="#2">Інтеграція машинного навчання в аналіз фінансових ринків</a></li>
-                <li><a href="#3">Основи великих даних: збір, зберігання та аналіз</a></li>
-                <li><a href="#4">Штучний інтелект в управлінні ланцюгами постачання</a></li>
-                <li><a href="#5">Методи прогнозування за допомогою машинного навчання</a></li>
-                <li><a href="#6">Методи аналізу часових рядів для прогнозування тенденцій</a></li>
-                <li><a href="#7">Етичні питання у використанні особистих даних у Data Science</a></li>
-                <li><a href="#8">Аналітика даних для підвищення продуктивності бізнесу</a></li>
-            </ul>
-        </div>
+                    <ul class="tag-list scroller__inner">
+                        <li><a href="#1">Machine Learning: A Brief Overview</a></li>
+                        <li><a href="#2">Інтеграція машинного навчання в аналіз фінансових ринків</a></li>
+                        <li><a href="#3">Основи великих даних: збір, зберігання та аналіз</a></li>
+                        <li><a href="#4">Штучний інтелект в управлінні ланцюгами постачання</a></li>
+                        <li><a href="#5">Методи прогнозування за допомогою машинного навчання</a></li>
+                        <li><a href="#6">Методи аналізу часових рядів для прогнозування тенденцій</a></li>
+                        <li><a href="#7">Етичні питання у використанні особистих даних у Data Science</a></li>
+                        <li><a href="#8">Аналітика даних для підвищення продуктивності бізнесу</a></li>
+                    </ul>
+                </div>
 
-        <div class="filter">
-            <h2 class="visually-hidden">Filter by topic of blog</h2>
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="data-science">Data Science</button>
-            <button class="filter-btn" data-filter="data-engineering">Data Engineering</button>
-            <button class="filter-btn" data-filter="big-data">Big Data</button>
-            <button class="filter-btn" data-filter="ai">AI</button>
-            <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
-            <button class="filter-btn" data-filter="data-analytics">Data Analytics</button>
-        </div>
+                <div class="filter">
+                    <h2 class="visually-hidden">Filter by topic of blog</h2>
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="data-science">Data Science</button>
+                    <button class="filter-btn" data-filter="data-engineering">Data Engineering</button>
+                    <button class="filter-btn" data-filter="big-data">Big Data</button>
+                    <button class="filter-btn" data-filter="ai">AI</button>
+                    <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+                    <button class="filter-btn" data-filter="data-analytics">Data Analytics</button>
+                </div>
 
-        <div class="blog-container">
-            <ul class="blog-list">
-                <li class="blog-item" id="1" data-category="big-data">
-                    <div class="blog-title-wrapper">
-                        <p class="blog-title">Вплив Big Data на розвиток інтернет-торгівлі</p>
-                        <span>icon</span>
-                    </div>
-                    <div class="blog-content-wrapper">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab fuga
-                            temporibus provident consequuntur dolor dolore consequatur adipisci odit officia autem sint
-                            iusto, nam quo eos commodi sed enim facilis inventore nisi! Alias, totam velit cum amet
-                            perferendis sed nulla ex, fugit laudantium tempore inventore aut minus doloremque officiis?
-                            Veniam dolorem, ex doloribus et hic odio architecto aspernatur ea reprehenderit nam corrupti
-                            optio eius cum deserunt pariatur vel dolorum tempora, magnam sit sunt nobis recusandae sed
-                            natus voluptate? Nobis aspernatur similique error possimus? Vel fugiat quasi quis molestiae
-                            et deserunt consequatur rerum qui deleniti dolor. Esse, ut dolorem!
-                        </p>
-                    </div>
-                </li>
-                <li class="blog-item" id="2" data-category="machine-learning">
-                    <div class="blog-title-wrapper">
-                        <p class="blog-title">Інтеграція машинного навчання в аналіз фінансових ринків</p>
-                        <span>icon</span>
-                    </div>
-                    <div class="blog-content-wrapper">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab fuga
-                            temporibus provident consequuntur dolor dolore consequatur adipisci odit officia autem sint
-                            iusto, nam quo eos commodi sed enim facilis inventore nisi! Alias, totam velit cum amet
-                            perferendis sed nulla ex, fugit laudantium tempore inventore aut minus doloremque officiis?
-                            Veniam dolorem, ex doloribus et hic odio architecto aspernatur ea reprehenderit nam corrupti
-                            optio eius cum deserunt pariatur vel dolorum tempora, magnam sit sunt nobis recusandae sed
-                            natus voluptate? Nobis aspernatur similique error possimus? Vel fugiat quasi quis molestiae
-                            et deserunt consequatur rerum qui deleniti dolor. Esse, ut dolorem!
-                        </p>
-                    </div>
-                </li>
-                <li class="blog-item" id="3" data-category="big-data data-engineering">
-                    <div class="blog-title-wrapper">
-                        <p class="blog-title">Основи великих даних: збір, зберігання та аналіз</p>
-                        <span>icon</span>
-                    </div>
-                    <div class="blog-content-wrapper">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab fuga
-                            temporibus provident consequuntur dolor dolore consequatur adipisci odit officia autem sint
-                            iusto, nam quo eos commodi sed enim facilis inventore nisi! Alias, totam velit cum amet
-                            perferendis sed nulla ex, fugit laudantium tempore inventore aut minus doloremque officiis?
-                            Veniam dolorem, ex doloribus et hic odio architecto aspernatur ea reprehenderit nam corrupti
-                            optio eius cum deserunt pariatur vel dolorum tempora, magnam sit sunt nobis recusandae sed
-                            natus voluptate? Nobis aspernatur similique error possimus? Vel fugiat quasi quis molestiae
-                            et deserunt consequatur rerum qui deleniti dolor. Esse, ut dolorem!
-                        </p>
-                    </div>
-                </li>
-                <li class="blog-item" id="4" data-category="ai">
-                    <div class="blog-title-wrapper">
-                        <p class="blog-title">Штучний інтелект в управлінні ланцюгами постачання</p>
-                        <span>icon</span>
-                    </div>
-                    <div class="blog-content-wrapper">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab fuga
-                            temporibus provident consequuntur dolor dolore consequatur adipisci odit officia autem sint
-                            iusto, nam quo eos commodi sed enim facilis inventore nisi! Alias, totam velit cum amet
-                            perferendis sed nulla ex, fugit laudantium tempore inventore aut minus doloremque officiis?
-                            Veniam dolorem, ex doloribus et hic odio architecto aspernatur ea reprehenderit nam corrupti
-                            optio eius cum deserunt pariatur vel dolorum tempora, magnam sit sunt nobis recusandae sed
-                            natus voluptate? Nobis aspernatur similique error possimus? Vel fugiat quasi quis molestiae
-                            et deserunt consequatur rerum qui deleniti dolor. Esse, ut dolorem!
-                        </p>
-                    </div>
-                </li>
-                <li class="blog-item" id="5" data-category="data-science machine-learning">
-                    <div class="blog-title-wrapper">
-                        <p class="blog-title">Методи прогнозування за допомогою машинного навчання</p>
-                        <span>icon</span>
-                    </div>
-                    <div class="blog-content-wrapper">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab fuga
-                            temporibus provident consequuntur dolor dolore consequatur adipisci odit officia autem sint
-                            iusto, nam quo eos commodi sed enim facilis inventore nisi! Alias, totam velit cum amet
-                            perferendis sed nulla ex, fugit laudantium tempore inventore aut minus doloremque officiis?
-                            Veniam dolorem, ex doloribus et hic odio architecto aspernatur ea reprehenderit nam corrupti
-                            optio eius cum deserunt pariatur vel dolorum tempora, magnam sit sunt nobis recusandae sed
-                            natus voluptate? Nobis aspernatur similique error possimus? Vel fugiat quasi quis molestiae
-                            et deserunt consequatur rerum qui deleniti dolor. Esse, ut dolorem!
-                        </p>
-                    </div>
-                </li>
-                <li class="blog-item" id="6" data-category="data-science">
-                    <div class="blog-title-wrapper">
-                        <p class="blog-title">Методи аналізу часових рядів для прогнозування тенденцій</p>
-                        <span>icon</span>
-                    </div>
-                    <div class="blog-content-wrapper">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab fuga
-                            temporibus provident consequuntur dolor dolore consequatur adipisci odit officia autem sint
-                            iusto, nam quo eos commodi sed enim facilis inventore nisi! Alias, totam velit cum amet
-                            perferendis sed nulla ex, fugit laudantium tempore inventore aut minus doloremque officiis?
-                            Veniam dolorem, ex doloribus et hic odio architecto aspernatur ea reprehenderit nam corrupti
-                            optio eius cum deserunt pariatur vel dolorum tempora, magnam sit sunt nobis recusandae sed
-                            natus voluptate? Nobis aspernatur similique error possimus? Vel fugiat quasi quis molestiae
-                            et deserunt consequatur rerum qui deleniti dolor. Esse, ut dolorem!
-                        </p>
-                    </div>
-                </li>
-                <li class="blog-item" id="7" data-category="data-science">
-                    <div class="blog-title-wrapper">
-                        <p class="blog-title">Етичні питання у використанні особистих даних у Data Science</p>
-                        <span>icon</span>
-                    </div>
-                    <div class="blog-content-wrapper">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab fuga
-                            temporibus provident consequuntur dolor dolore consequatur adipisci odit officia autem sint
-                            iusto, nam quo eos commodi sed enim facilis inventore nisi! Alias, totam velit cum amet
-                            perferendis sed nulla ex, fugit laudantium tempore inventore aut minus doloremque officiis?
-                            Veniam dolorem, ex doloribus et hic odio architecto aspernatur ea reprehenderit nam corrupti
-                            optio eius cum deserunt pariatur vel dolorum tempora, magnam sit sunt nobis recusandae sed
-                            natus voluptate? Nobis aspernatur similique error possimus? Vel fugiat quasi quis molestiae
-                            et deserunt consequatur rerum qui deleniti dolor. Esse, ut dolorem!
-                        </p>
-                    </div>
-                </li>
-                <li class="blog-item" id="8" data-category="data-analytics">
-                    <div class="blog-title-wrapper">
-                        <p class="blog-title">Аналітика даних для підвищення продуктивності бізнесу</p>
-                        <span>icon</span>
-                    </div>
-                    <div class="blog-content-wrapper">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab fuga
-                            temporibus provident consequuntur dolor dolore consequatur adipisci odit officia autem sint
-                            iusto, nam quo eos commodi sed enim facilis inventore nisi! Alias, totam velit cum amet
-                            perferendis sed nulla ex, fugit laudantium tempore inventore aut minus doloremque officiis?
-                            Veniam dolorem, ex doloribus et hic odio architecto aspernatur ea reprehenderit nam corrupti
-                            optio eius cum deserunt pariatur vel dolorum tempora, magnam sit sunt nobis recusandae sed
-                            natus voluptate? Nobis aspernatur similique error possimus? Vel fugiat quasi quis molestiae
-                            et deserunt consequatur rerum qui deleniti dolor. Esse, ut dolorem!
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
+                <!-- <input class="blog-input" type="text" /> -->
+
+                <div class="blog-container">
+                    <ul class="blog-list">
+                        <li class="blog-item" id="1" data-category="machine-learning">
+                            <div class="blog-title-wrapper">
+                                <h3 class="blog-title">Machine Learning: A Brief Overview</h3>
+                            </div>
+                            <div class="blog-content-wrapper">
+                                <span>Machine Learning: A Brief Overview</span>
+                                <p>
+                                    Machine learning is a subfield of artificial intelligence that focuses on the
+                                    development of algorithms that can learn from and make predictions on data. It has
+                                    become increasingly popular in recent years due to the explosion of data and the
+                                    need to extract insights from it.
+                                </p>
+                                <span>What is Machine Learning?</span>
+                                <p>
+                                    At its core, machine learning is about creating algorithms that can learn from data.
+                                    These algorithms are designed to identify patterns and relationships in data, and
+                                    then use this information to make predictions or decisions. There are three main
+                                    types of machine learning:
+                                </p>
+                                <ol>
+                                    <li>
+                                        Supervised Learning: In supervised learning, the algorithm is trained on a
+                                        labeled dataset. The goal is to learn a mapping between inputs and outputs so
+                                        that the algorithm can make accurate predictions on new, unseen data.
+                                    </li>
+                                    <li>
+                                        Unsupervised Learning: In unsupervised learning, the algorithm is trained on an
+                                        unlabeled dataset. The goal is to identify patterns and relationships in the
+                                        data without any prior knowledge of what the data represents.
+                                    </li>
+                                    <li>
+                                        Reinforcement Learning: In reinforcement learning, the algorithm learns by
+                                        interacting with an environment. The goal is to learn a policy that maximizes
+                                        some notion of reward.
+                                    </li>
+                                </ol>
+                                <span>Applications of Machine Learning</span>
+                                <p>
+                                    Machine learning has a wide range of applications across many different industries.
+                                    Here are just a few examples:
+                                </p>
+                                <ol>
+                                    <li>
+                                        Healthcare: Machine learning is being used to develop predictive models that can
+                                        help doctors diagnose diseases and develop treatment plans.
+                                    </li>
+                                    <li>
+                                        Finance: Machine learning is being used to develop fraud detection systems and
+                                        to make more accurate predictions about stock prices.
+                                    </li>
+                                    <li>
+                                        Marketing: Machine learning is being used to develop personalized marketing
+                                        campaigns that are tailored to individual customers.
+                                    </li>
+                                </ol>
+                                <span>Conclusion</span>
+                                <p>
+                                    Machine learning is a powerful tool that has the potential to revolutionize many
+                                    different industries. By developing algorithms that can learn from data, we can
+                                    extract insights and make predictions that were previously impossible. As the amount
+                                    of data continues to grow, the importance of machine learning will only continue to
+                                    increase.
+                                </p>
+                            </div>
+                            <button class="blog-read-more">read more</button>
+                            <ul class="blog-categories">
+                                <li>Big Data</li>
+                                <li>E-commerce</li>
+                                <li>Machine Learning</li>
+                            </ul>
+                        </li>
+                        <li class="blog-item" id="2" data-category="machine-learning">
+                            <div class="blog-title-wrapper">
+                                <h3 class="blog-title">Інтеграція машинного навчання в аналіз фінансових ринків</h3>
+                            </div>
+                            <div class="blog-content-wrapper">
+                                <p>
+                                    Ipsum, omnis ratione! Minus laboriosam odit delectus sed quia repellat reiciendis
+                                    numquam et qui laborum culpa molestiae quaerat nulla animi quibusdam a id veniam
+                                    praesentium magnam molestias, nostrum nihil consequuntur deserunt omnis. Esse
+                                    laboriosam eum possimus illo qui architecto natus nemo eius, quia labore. Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit. Eius nulla veniam tempora
+                                    repellendus ullam maxime mollitia quisquam beatae obcaecati vel. Aperiam, iusto
+                                    accusamus explicabo incidunt qui voluptatum vitae ut architecto quis aliquid itaque
+                                    autem. Sequi esse numquam illo voluptate ipsum officiis nam nesciunt quasi officia
+                                    dolor, odit ratione quam ex, at consequuntur assumenda? Voluptatem, non animi?
+                                </p>
+                            </div>
+                            <button class="blog-read-more">read more</button>
+                            <ul class="blog-categories">
+                                <li>Machine Learning</li>
+                                <li>Finance</li>
+                            </ul>
+                        </li>
+                        <li class="blog-item" id="3" data-category="big-data data-engineering">
+                            <div class="blog-title-wrapper">
+                                <h3 class="blog-title">Основи великих даних: збір, зберігання та аналіз</h3>
+                            </div>
+                            <div class="blog-content-wrapper">
+                                <p>
+                                    Veniam dolorem, ex doloribus et hic odio architecto aspernatur ea reprehenderit nam
+                                    corrupti optio eius cum deserunt pariatur vel dolorum tempora, magnam sit sunt nobis
+                                    recusandae sed natus voluptate? Nobis aspernatur similique error possimus? Vel
+                                    fugiat quasi quis molestiae et deserunt consequatur rerum qui deleniti dolor. Esse,
+                                    ut dolorem! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+                                    facere ea, ab fuga temporibus provident consequuntur dolor dolore consequatur
+                                    adipisci odit officia autem sint iusto, nam quo eos commodi sed enim facilis
+                                    inventore nisi! Alias, totam velit cum amet perferendis sed nulla ex, fugit
+                                    laudantium tempore inventore aut minus doloremque officiis?
+                                </p>
+                            </div>
+                            <button class="blog-read-more">read more</button>
+                            <ul class="blog-categories">
+                                <li>Big Data</li>
+                                <li>Data Engineering</li>
+                            </ul>
+                        </li>
+                        <li class="blog-item" id="4" data-category="ai">
+                            <div class="blog-title-wrapper">
+                                <h3 class="blog-title">Штучний інтелект в управлінні ланцюгами постачання</h3>
+                            </div>
+                            <div class="blog-content-wrapper">
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab
+                                    fuga temporibus provident consequuntur dolor dolore consequatur adipisci odit
+                                    officia autem sint iusto, nam quo eos commodi sed enim facilis inventore nisi!
+                                    Alias, totam velit cum amet perferendis sed nulla ex, fugit laudantium tempore
+                                    inventore aut minus doloremque officiis? Veniam dolorem, ex doloribus et hic odio
+                                    architecto aspernatur ea reprehenderit nam corrupti optio eius cum deserunt pariatur
+                                    vel dolorum tempora, magnam sit sunt nobis recusandae sed natus voluptate? Nobis
+                                    aspernatur similique error possimus? Vel fugiat quasi quis molestiae et deserunt
+                                    consequatur rerum qui deleniti dolor. Esse, ut dolorem!
+                                </p>
+                            </div>
+                            <button class="blog-read-more">read more</button>
+                            <ul class="blog-categories">
+                                <li>Big Data</li>
+                                <li>Data Engineering</li>
+                            </ul>
+                        </li>
+                        <li class="blog-item" id="5" data-category="data-science machine-learning">
+                            <div class="blog-title-wrapper">
+                                <h3 class="blog-title">Методи прогнозування за допомогою машинного навчання</h3>
+                            </div>
+                            <div class="blog-content-wrapper">
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab
+                                    fuga temporibus provident consequuntur dolor dolore consequatur adipisci odit
+                                    officia autem sint iusto, nam quo eos commodi sed enim facilis inventore nisi!
+                                    Alias, totam velit cum amet perferendis sed nulla ex, fugit laudantium tempore
+                                    inventore aut minus doloremque officiis? Veniam dolorem, ex doloribus et hic odio
+                                    architecto aspernatur ea reprehenderit nam corrupti optio eius cum deserunt pariatur
+                                    vel dolorum tempora, magnam sit sunt nobis recusandae sed natus voluptate? Nobis
+                                    aspernatur similique error possimus? Vel fugiat quasi quis molestiae et deserunt
+                                    consequatur rerum qui deleniti dolor. Esse, ut dolorem!
+                                </p>
+                            </div>
+                            <button class="blog-read-more">read more</button>
+                            <ul class="blog-categories">
+                                <li>Big Data</li>
+                                <li>Data Engineering</li>
+                            </ul>
+                        </li>
+                        <li class="blog-item" id="6" data-category="data-science">
+                            <div class="blog-title-wrapper">
+                                <h3 class="blog-title">Методи аналізу часових рядів для прогнозування тенденцій</h3>
+                            </div>
+                            <div class="blog-content-wrapper">
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab
+                                    fuga temporibus provident consequuntur dolor dolore consequatur adipisci odit
+                                    officia autem sint iusto, nam quo eos commodi sed enim facilis inventore nisi!
+                                    Alias, totam velit cum amet perferendis sed nulla ex, fugit laudantium tempore
+                                    inventore aut minus doloremque officiis? Veniam dolorem, ex doloribus et hic odio
+                                    architecto aspernatur ea reprehenderit nam corrupti optio eius cum deserunt pariatur
+                                    vel dolorum tempora, magnam sit sunt nobis recusandae sed natus voluptate? Nobis
+                                    aspernatur similique error possimus? Vel fugiat quasi quis molestiae et deserunt
+                                    consequatur rerum qui deleniti dolor. Esse, ut dolorem!
+                                </p>
+                            </div>
+                            <button class="blog-read-more">read more</button>
+                            <ul class="blog-categories">
+                                <li>Big Data</li>
+                                <li>Data Engineering</li>
+                            </ul>
+                        </li>
+                        <li class="blog-item" id="7" data-category="data-science">
+                            <div class="blog-title-wrapper">
+                                <h3 class="blog-title">Етичні питання у використанні особистих даних у Data Science</h3>
+                            </div>
+                            <div class="blog-content-wrapper">
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab
+                                    fuga temporibus provident consequuntur dolor dolore consequatur adipisci odit
+                                    officia autem sint iusto, nam quo eos commodi sed enim facilis inventore nisi!
+                                    Alias, totam velit cum amet perferendis sed nulla ex, fugit laudantium tempore
+                                    inventore aut minus doloremque officiis? Veniam dolorem, ex doloribus et hic odio
+                                    architecto aspernatur ea reprehenderit nam corrupti optio eius cum deserunt pariatur
+                                    vel dolorum tempora, magnam sit sunt nobis recusandae sed natus voluptate? Nobis
+                                    aspernatur similique error possimus? Vel fugiat quasi quis molestiae et deserunt
+                                    consequatur rerum qui deleniti dolor. Esse, ut dolorem!
+                                </p>
+                            </div>
+                            <button class="blog-read-more">read more</button>
+                            <ul class="blog-categories">
+                                <li>Big Data</li>
+                                <li>Data Engineering</li>
+                            </ul>
+                        </li>
+                        <li class="blog-item" id="8" data-category="data-analytics">
+                            <div class="blog-title-wrapper">
+                                <h3 class="blog-title">Аналітика даних для підвищення продуктивності бізнесу</h3>
+                            </div>
+                            <div class="blog-content-wrapper">
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facere ea, ab
+                                    fuga temporibus provident consequuntur dolor dolore consequatur adipisci odit
+                                    officia autem sint iusto, nam quo eos commodi sed enim facilis inventore nisi!
+                                    Alias, totam velit cum amet perferendis sed nulla ex, fugit laudantium tempore
+                                    inventore aut minus doloremque officiis? Veniam dolorem, ex doloribus et hic odio
+                                    architecto aspernatur ea reprehenderit nam corrupti optio eius cum deserunt pariatur
+                                    vel dolorum tempora, magnam sit sunt nobis recusandae sed natus voluptate? Nobis
+                                    aspernatur similique error possimus? Vel fugiat quasi quis molestiae et deserunt
+                                    consequatur rerum qui deleniti dolor. Esse, ut dolorem!
+                                </p>
+                            </div>
+                            <button class="blog-read-more">read more</button>
+                            <ul class="blog-categories">
+                                <li>Big Data</li>
+                                <li>Data Engineering</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
         <script type="text/javascript" src="main.js"></script>
     </body>
