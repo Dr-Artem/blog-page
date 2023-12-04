@@ -1,9 +1,9 @@
 // Moving string
 const scrollers = document.querySelectorAll(".scroller");
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    addAnimation();
-}
+// if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+//     addAnimation();
+// }
 
 function addAnimation() {
     scrollers.forEach((scroller) => {
@@ -70,11 +70,13 @@ function filterEvents(filter) {
 
 let previousButton = null;
 // Додавання події кліку на кожну кнопку "read more"
-blogItems.forEach(function (item) {
+blogItems.forEach(function (item, index) {
     const seeMoreButton = item.querySelector("button");
+    item.style.order = index + 1;
 
     seeMoreButton.addEventListener("click", function (event) {
         const isExpanded = item.getAttribute("data-expanded") === "true";
+        const elementHeight = item.clientHeight;
 
         if (!isExpanded) {
             blogItems.forEach((blog) => {
@@ -100,9 +102,32 @@ blogItems.forEach(function (item) {
             previousButton = seeMoreButton;
         } else {
             item.setAttribute("data-expanded", "false");
-            // item.setAttribute("data-prevoius", "false");
             item.classList.add("close");
             seeMoreButton.textContent = "read more";
+
+            window.scrollBy({
+                top: elementHeight >= 500 ? 500 - elementHeight : 0,
+                behavior: "smooth",
+            });
         }
     });
+});
+
+function filterTitles(title) {
+    blogItems.forEach((blog) => {
+        const blogTitle = blog.querySelector(".blog-title");
+        const blogTitleArray = blogTitle.textContent.toLowerCase();
+
+        if (blogTitleArray.includes(title)) {
+            blog.removeAttribute("hidden");
+        } else {
+            blog.setAttribute("hidden", "");
+        }
+    });
+}
+
+const blogInput = document.querySelector(".blog-input");
+blogInput.addEventListener("input", ({ target }) => {
+    const inputValue = target.value.toLowerCase();
+    filterTitles(inputValue);
 });
